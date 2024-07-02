@@ -17,5 +17,5 @@ public class Chat implements Serializable {
     String id = UUID.randomUUID().toString();
     String name;
     @Builder.Default
-    Instant createdAt = Instant.now();
+    Long createdAt = Instant.now().toEpochMilli();
 }

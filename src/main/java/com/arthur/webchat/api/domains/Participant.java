@@ -13,8 +13,8 @@ import java.time.Instant;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Participant implements Serializable {
     @Builder.Default
-    Instant enterAt = Instant.now();
+    Long enterAt = Instant.now().toEpochMilli();
     String sessionId;
-    String participantId;
+    String id;
     String chatId;
 }
